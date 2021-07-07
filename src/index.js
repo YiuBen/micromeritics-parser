@@ -1,7 +1,16 @@
+import { getMatrixFromWorkbook } from './getMatrixFromWorkbook';
+import { parseMeta } from './parseMeta';
+import { parseTables } from './parseTables';
+
 /**
- * Returns a very important number
- * @return {number}
+ *
+ * Parses an Excel workbook containing Micromeritics data
+ * @param {object} workbook xlsx workbook to parse
+ * @return {object} Object with meta data and tables data
  */
-export function myModule() {
-  return 42;
+export function parseMicromeritics(workbook) {
+  const matrix = getMatrixFromWorkbook(workbook);
+  const meta = parseMeta(matrix);
+  const tables = parseTables(matrix);
+  return { meta: meta, tables: tables };
 }
