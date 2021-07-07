@@ -1,3 +1,8 @@
+/**
+ * Parses the header/meta of an excel workbook
+ * @param {array} baseMatrix Matrix derived from the excel workbook
+ * @return {object} Object containing the meta data of the workbook
+ */
 export function parseMeta(baseMatrix) {
   if (baseMatrix === []) {
     return {};
