@@ -1,7 +1,7 @@
 {
   "name": "micromeritics-parser",
   "version": "0.0.0",
-  "description": "Parses an excel workbook containing Micrometrics data",
+  "description": "Parses an excel workbook containing Micromeritics data",
   "main": "lib/index.js",
   "module": "src/index.js",
   "files": [
